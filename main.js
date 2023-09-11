@@ -15,6 +15,14 @@ class item {
     }
 }
 
+ PerformAction(actionType){
+    if (actionType === "BonneAction"){
+        this.alignment += 10;
+    }
+    else if (actionType === "MauvaiseAction"){
+        this.alignment -= 10;
+    }
+ }
 let item = {
     name: "Trèfle à quatre feuilles",
     description: "augmente l’or de base du joueur.",
