@@ -14,3 +14,25 @@ class item {
       this.effect = effect;
     }
 }
+
+let item = {
+    name: "Trèfle à quatre feuilles",
+    description: "augmente l’or de base du joueur.",
+    price: 0,
+    effect: "",
+
+};
+let item = {
+    name: "Bénédiction des dieux",
+    description: "augmente le niveau d’alignement de base du joueur.",
+    price: 0,
+    effect: "",
+
+};
+let item = {
+    name: "Bonne étoile",
+    description: "augmente légèrement l’or et le niveau d’alignement de base du joueur.",
+    price: 0,
+    effect: "",
+
+};
