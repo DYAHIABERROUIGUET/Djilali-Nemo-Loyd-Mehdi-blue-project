@@ -7,7 +7,45 @@
     <link href="main.css" rel="stylesheet">
 </head>
 <body>
-    
+
+    <div class="titre">
+        <h3>Veuillez choisir un objet pour commencer l'aventure</h3>
+    </div>
+
+    <div class="objet">
+        
+        <input type="checkbox" class="single-checkbox" id="" name="" value="objet1">
+        <label for="objet1">Trèfle à quatre feuilles</label><br>
+        <input type="checkbox" class="single-checkbox" id="" name="" value="objet2">
+        <label for="objet2">Bénédiction des dieux</label><br>
+        <input type="checkbox" class="single-checkbox" id="" name="" value="objet3">
+        <label for="objet3">Bonne étoile</label><br>
+
+    </div>
+
+    <div class="jouer">
+        <button id="start">Ce lancer dans l'aventure</button>
+    </div>
+
 </body>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.single-checkbox');
+
+        // Ajoutez un écouteur d'événements à chaque case à cocher
+        checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function(e) {
+            // Si la case à cocher est sélectionnée, désélectionnez toutes les autres
+            if (e.target.checked) {
+            checkboxes.forEach(function(box) {
+                if (box !== e.target) {
+                box.checked = false;
+                }
+            });
+            }
+        });
+        });
+    </script>
+    
     <script type="text/javascript" src="main.js"></script>
 </html>
