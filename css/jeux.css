@@ -3,3 +3,8 @@
     text-align: center;
     height: 100vh; /* Facultatif : utilisez pour centrer dans la vue du port */
 }
+.info{
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+}
