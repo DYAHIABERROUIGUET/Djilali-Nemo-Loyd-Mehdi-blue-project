@@ -1,0 +1,11 @@
+.arriere{
+    background-image: url(../assets/img/Première.jpg);
+    background-size: cover;  /* Ajuste l'image pour qu'elle couvre entièrement l'élément */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-attachment: fixed;
+}
+.jouer{
+    width: auto;
+    height: 800px;
+}
