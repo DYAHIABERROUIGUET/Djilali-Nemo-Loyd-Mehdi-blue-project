@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
+    <?php
+    include 'connexion.php';
+    ?>
 
     <label>Comment vous appelez-vous ?
         <input type='text' name='firstName' id='firstName' placeholder="First Name">
@@ -18,15 +19,14 @@
     </div>
 
     <div class="objet">
-
         <input type="checkbox" class="single-checkbox" id="" name="" value="objet1">
         <label for="objet1">Trèfle à quatre feuilles</label><br>
         <input type="checkbox" class="single-checkbox" id="" name="" value="objet2">
         <label for="objet2">Bénédiction des dieux</label><br>
         <input type="checkbox" class="single-checkbox" id="" name="" value="objet3">
         <label for="objet3">Bonne étoile</label><br>
-
     </div>
+
     <p>Questionnaire d'alignement :</p>
     <label>
         <input type="radio" name="alignment" value="good"> Bonne action (+20 d'alignement)
@@ -40,8 +40,7 @@
 
     <button onclick="window.location='initialisation.html';" id="start">Créer le joueur</button>
 
-
-    </form>
+    <!-- Vous pouvez ajouter du contenu supplémentaire ici si nécessaire -->
 
 </body>
 <script>
@@ -61,9 +60,4 @@
         });
     });
 </script>
-<?php
-$dsn = 'mysql:host=127.0.0.1;dbname=formulaireprojectblue;charset=utf8mb4';
-$pdo = new PDO($dsn, 'root', '');
-?>
-
 </html>
