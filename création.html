@@ -5,58 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="main.css" rel="stylesheet">
-    <script src="cookie.js"></script>
 </head>
 <body>
 
     <label>Comment vous appelez-vous ?
-        <input type='text' name='firstName' id='firstName' placeholder="First Name">
+        <input type='text' name='name' id='name' placeholder="First Name">
     </label>
 
     <div class="titre">
         <h3>Veuillez choisir un objet pour commencer l'aventure</h3>
     </div>
 
-    <div class="objet">
-        <input type="checkbox" class="single-checkbox" id="" name="" value="objet1">
+    <div class="objet" id="myForm">
+        <input type="checkbox" class="single-checkbox" id="obj1" name="obj1" value="objet1">
         <label for="objet1">Trèfle à quatre feuilles</label><br>
-        <input type="checkbox" class="single-checkbox" id="ob" name="" value="objet2">
+        <input type="checkbox" class="single-checkbox" id="obj2" name="obj2" value="objet2">
         <label for="objet2">Bénédiction des dieux</label><br>
-        <input type="checkbox" class="single-checkbox" id="ob" name="" value="objet3">
+        <input type="checkbox" class="single-checkbox" id="obj3" name="obj3" value="objet3">
         <label for="objet3">Bonne étoile</label><br>
     </div>
 
     <p>Questionnaire d'alignement :</p>
     <label>
-        <input type="radio" name="alignment" value="good"> Bonne action (+20 d'alignement)
+        <input type="radio" name="alignment" id="quest1" value="1"> Bonne action (+20 d'alignement)
     </label><br>
     <label>
-        <input type="radio" name="alignment" value="neutral" checked> Neutre (0 d'alignement)
+        <input type="radio" name="alignment" id="quest2" value="2" checked> Neutre (0 d'alignement)
     </label><br>
     <label>
-        <input type="radio" name="alignment" value="bad"> Mauvaise action (-20 d'alignement)
+        <input type="radio" name="alignment" id="quest3" value="3"> Mauvaise action (-20 d'alignement)
     </label><br>
 
-    <button onclick="window.location='initialisation.html';" id="start">Créer le joueur</button>
-
-    <!-- Vous pouvez ajouter du contenu supplémentaire ici si nécessaire -->
-
+    <button id="displayButton">Créer le joueur</button> <!-- Renommé le bouton avec l'ID displayButton -->
+    <script src="index.js"></script>
 </body>
-<script>
-    const checkboxes = document.querySelectorAll('.single-checkbox');
-
-    // Ajoutez un écouteur d'événements à chaque case à cocher
-    checkboxes.forEach(function(checkbox) {
-        checkbox.addEventListener('change', function(e) {
-            // Si la case à cocher est sélectionnée, désélectionnez toutes les autres
-            if (e.target.checked) {
-                checkboxes.forEach(function(box) {
-                    if (box !== e.target) {
-                        box.checked = false;
-                    }
-                });
-            }
-        });
-    });
-</script>
 </html>
