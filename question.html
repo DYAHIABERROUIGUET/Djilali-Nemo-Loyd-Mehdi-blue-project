@@ -7,92 +7,65 @@
 </head>
 <body>
     <h1>Questionnaire interactif</h1>
-    <div id="question-container">
-        <p id="question">Question 1 : Quelle est votre couleur préférée ?</p>
-        <select id="reponse" onchange="questionSuivante()">
-            <option value="">Sélectionnez une réponse</option>
-        </select>
+    <div id="events">
+        <p id="description"></p>
+        <div id="reponse" onchange="questionSuivante()">
+            <button value="a" id="description"></button>
+            <button value="b" id="description"></button>
+        </div>
     </div>
 
+    <header></header>
+    <section></section>
+    
     <script>
-        var questionsReponses = [
-            {
-                question: "Question 1 : Quelle est votre couleur préférée ?",
-                reponses: ["Rouge", "Bleu", "Vert"]
-            },
-            {
-                question: "Question 2 : Quel est votre animal préféré ?",
-                reponses: ["Chien", "Chat", "Oiseau"]
-            },
-            {
-                question: "Question 3 : Quel est votre plat préféré ?",
-                reponses: ["Pizza", "Sushi", "Burger"]
-            },
-            {
-                question: "Question 4 : Quelle est votre saison préférée ?",
-                reponses: ["Été", "Automne", "Hiver"]
-            },
-            {
-                question: "Question 5 : Quel est votre film préféré ?",
-                reponses: ["Titanic", "Star Wars", "Le Seigneur des Anneaux"]
-            },
-            {
-                question: "Question 6 : Quel est votre sport préféré ?",
-                reponses: ["Football", "Basketball", "Tennis"]
-            },
-            {
-                question: "Question 7 : Quel est votre livre préféré ?",
-                reponses: ["Harry Potter", "Le Hobbit", "1984"]
-            },
-            {
-                question: "Question 8 : Quel est votre pays préféré à visiter ?",
-                reponses: ["France", "Japon", "Italie"]
-            },
-            {
-                question: "Question 9 : Quel est votre dessert préféré ?",
-                reponses: ["Gâteau au chocolat", "Tarte aux pommes", "Crème brûlée"]
-            },
-            {
-                question: "Question 10 : Quelle est votre boisson préférée ?",
-                reponses: ["Café", "Thé", "Jus d'orange"]
-            }
-        ];
 
-        var questionIndex = 0;
-        var reponseSelect = document.getElementById('reponse');
+        var header = document.querySelector("header");
+        var section = document.querySelector("section");
 
-        function initialiserQuestion() {
-            var question = questionsReponses[questionIndex];
-            var questionContainer = document.getElementById('question');
+        var requestSRC = "events.json";
+
+        // var eventsData;
+        // var questionIndex = 0;
+        // var reponseSelect = document.getElementById('reponse');
+
+        // // Charger le fichier JSON
+        // fetch('backend/events.json')
+        // .then(response => response.json())
+        // .then(data => {
+        //     eventsData = data;
+        //     initialiserQuestion();  // Initialiser la première question une fois le fichier JSON chargé
+        // });
+
+        // function initialiserQuestion() {
+        //     var event = eventsData.events[questionIndex];
+        //     var questionContainer = document.getElementById('question');
             
-            questionContainer.textContent = question.question;
-            reponseSelect.innerHTML = '<option value="">Sélectionnez une réponse</option>';
+        //     questionContainer.textContent = event.description || "Question " + (questionIndex + 1);
+        //     reponseSelect.innerHTML = '<option value="">Sélectionnez une réponse</option>';
             
-            question.reponses.forEach(function(reponse) {
-                var option = document.createElement('option');
-                option.value = reponse;
-                option.textContent = reponse;
-                reponseSelect.appendChild(option);
-            });
-        }
+        //     event.choix.reponse.forEach(function(reponse) {
+        //         var option = document.createElement('option');
+        //         option.value = reponse.effect;
+        //         option.textContent = reponse.a || reponse.b;
+        //         reponseSelect.appendChild(option);
+        //     });
+        // }
 
-        function questionSuivante() {
-            var reponse = reponseSelect.value;
+        // function questionSuivante() {
+        //     var reponse = reponseSelect.value;
             
-            // Sauvegarde de la réponse de l'utilisateur (vous pouvez la stocker ou la traiter comme vous le souhaitez)
-
-            // Passage à la question suivante si disponible
-            if (questionIndex < questionsReponses.length - 1) {
-                questionIndex++;
-                initialiserQuestion();
-            } else {
-                var questionContainer = document.getElementById('question-container');
-                questionContainer.innerHTML = "<p>Fin du questionnaire.</p>";
-            }
-        }
-
-        // Initialisation de la première question
-        initialiserQuestion();
+        //     // Sauvegarde de la réponse de l'utilisateur
+            
+        //     // Passage à la question suivante si disponible
+        //     if (questionIndex < eventsData.events.length - 1) {
+        //         questionIndex++;
+        //         initialiserQuestion();
+        //     } else {
+        //         var questionContainer = document.getElementById('question-container');
+        //         questionContainer.innerHTML = "<p>Fin du questionnaire.</p>";
+        //     }
+        // }
     </script>
 </body>
 </html>
