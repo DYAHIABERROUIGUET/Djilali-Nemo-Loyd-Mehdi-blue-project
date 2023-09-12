@@ -4,9 +4,11 @@
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     background-attachment: fixed;
+    width: auto;
+    height: auto;
 }
 .jouer{
-    width: auto;
-    height: 800px;
+    
     text-align: center;
+    height: 800px;
 }
