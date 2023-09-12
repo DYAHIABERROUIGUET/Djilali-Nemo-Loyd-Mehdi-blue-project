@@ -11,38 +11,88 @@
         <p id="question">Question 1 : Quelle est votre couleur préférée ?</p>
         <select id="reponse" onchange="questionSuivante()">
             <option value="">Sélectionnez une réponse</option>
-            <option value="Rouge">Rouge</option>
-            <option value="Bleu">Bleu</option>
-            <option value="Vert">Vert</option>
         </select>
     </div>
 
     <script>
-        var questions = [
-            "Question 1 : Quelle est votre couleur préférée ?",
-            "Question 2 : Quel est votre animal préféré ?",
-            "Question 3 : Quel est votre plat préféré ?"
+        var questionsReponses = [
+            {
+                question: "Question 1 : Quelle est votre couleur préférée ?",
+                reponses: ["Rouge", "Bleu", "Vert"]
+            },
+            {
+                question: "Question 2 : Quel est votre animal préféré ?",
+                reponses: ["Chien", "Chat", "Oiseau"]
+            },
+            {
+                question: "Question 3 : Quel est votre plat préféré ?",
+                reponses: ["Pizza", "Sushi", "Burger"]
+            },
+            {
+                question: "Question 4 : Quelle est votre saison préférée ?",
+                reponses: ["Été", "Automne", "Hiver"]
+            },
+            {
+                question: "Question 5 : Quel est votre film préféré ?",
+                reponses: ["Titanic", "Star Wars", "Le Seigneur des Anneaux"]
+            },
+            {
+                question: "Question 6 : Quel est votre sport préféré ?",
+                reponses: ["Football", "Basketball", "Tennis"]
+            },
+            {
+                question: "Question 7 : Quel est votre livre préféré ?",
+                reponses: ["Harry Potter", "Le Hobbit", "1984"]
+            },
+            {
+                question: "Question 8 : Quel est votre pays préféré à visiter ?",
+                reponses: ["France", "Japon", "Italie"]
+            },
+            {
+                question: "Question 9 : Quel est votre dessert préféré ?",
+                reponses: ["Gâteau au chocolat", "Tarte aux pommes", "Crème brûlée"]
+            },
+            {
+                question: "Question 10 : Quelle est votre boisson préférée ?",
+                reponses: ["Café", "Thé", "Jus d'orange"]
+            }
         ];
 
         var questionIndex = 0;
+        var reponseSelect = document.getElementById('reponse');
+
+        function initialiserQuestion() {
+            var question = questionsReponses[questionIndex];
+            var questionContainer = document.getElementById('question');
+            
+            questionContainer.textContent = question.question;
+            reponseSelect.innerHTML = '<option value="">Sélectionnez une réponse</option>';
+            
+            question.reponses.forEach(function(reponse) {
+                var option = document.createElement('option');
+                option.value = reponse;
+                option.textContent = reponse;
+                reponseSelect.appendChild(option);
+            });
+        }
 
         function questionSuivante() {
-            var questionContainer = document.getElementById('question-container');
-            var question = document.getElementById('question');
-            var reponse = document.getElementById('reponse');
-
+            var reponse = reponseSelect.value;
+            
             // Sauvegarde de la réponse de l'utilisateur (vous pouvez la stocker ou la traiter comme vous le souhaitez)
-            var reponseUtilisateur = reponse.value;
 
             // Passage à la question suivante si disponible
-            if (questionIndex < questions.length - 1) {
+            if (questionIndex < questionsReponses.length - 1) {
                 questionIndex++;
-                question.innerHTML = questions[questionIndex];
-                reponse.value = ''; // Réinitialisation de la réponse
+                initialiserQuestion();
             } else {
+                var questionContainer = document.getElementById('question-container');
                 questionContainer.innerHTML = "<p>Fin du questionnaire.</p>";
             }
         }
+
+        // Initialisation de la première question
+        initialiserQuestion();
     </script>
 </body>
 </html>
