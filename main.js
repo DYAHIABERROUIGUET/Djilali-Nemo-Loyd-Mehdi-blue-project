@@ -6,6 +6,22 @@ class Player {
       this.inventory = inventory;
     }
 }
+
+function initializePlayer() {
+    const username = prompt("Entrez votre pseudo :");
+    const alignment = parseInt(prompt("Entrez votre niveau d'alignement :"));
+    const gold = parseInt(prompt("Entrez la quantité d'or que vous possédez :"));
+}
+function initializePlayer() {
+    const username = prompt("Entrez votre pseudo :");
+    const alignment = parseInt(prompt("Entrez votre niveau d'alignement :"));
+    const gold = parseInt(prompt("Entrez la quantité d'or que vous possédez :"));
+}
+
+window.location.href = `initialisation.html?username=${player.username}&alignment=${player.alignment}&gold=${player.gold}`;
+
+const player = new Player(username, alignment, gold, []);
+
 class item {
     constructor(name, description, price, effect) {
       this.name = name;
@@ -44,3 +60,4 @@ let item = {
     effect: "",
 
 };
+
