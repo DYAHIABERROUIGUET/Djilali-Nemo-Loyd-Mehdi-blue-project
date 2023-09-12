@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire interactif</title>
+</head>
+<body>
+    <h1>Questionnaire interactif</h1>
+    <div id="question-container">
+        <p id="question">Question 1 : Quelle est votre couleur préférée ?</p>
+        <select id="reponse" onchange="questionSuivante()">
+            <option value="">Sélectionnez une réponse</option>
+            <option value="Rouge">Rouge</option>
+            <option value="Bleu">Bleu</option>
+            <option value="Vert">Vert</option>
+        </select>
+    </div>
+
+    <script>
+        var questions = [
+            "Question 1 : Quelle est votre couleur préférée ?",
+            "Question 2 : Quel est votre animal préféré ?",
+            "Question 3 : Quel est votre plat préféré ?"
+        ];
+
+        var questionIndex = 0;
+
+        function questionSuivante() {
+            var questionContainer = document.getElementById('question-container');
+            var question = document.getElementById('question');
+            var reponse = document.getElementById('reponse');
+
+            // Sauvegarde de la réponse de l'utilisateur (vous pouvez la stocker ou la traiter comme vous le souhaitez)
+            var reponseUtilisateur = reponse.value;
+
+            // Passage à la question suivante si disponible
+            if (questionIndex < questions.length - 1) {
+                questionIndex++;
+                question.innerHTML = questions[questionIndex];
+                reponse.value = ''; // Réinitialisation de la réponse
+            } else {
+                questionContainer.innerHTML = "<p>Fin du questionnaire.</p>";
+            }
+        }
+    </script>
+</body>
+</html>
