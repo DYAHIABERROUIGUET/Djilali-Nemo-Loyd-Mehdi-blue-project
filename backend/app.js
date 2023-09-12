@@ -4,10 +4,12 @@ const app = express();
 
 const port = 3000;
 
-app.use(express.static('../mainCss'));
+// Définir un répertoire racine pour les fichiers statiques
+app.use(express.static(path.join(__dirname, '../')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', './mainCss', '../index.html'));
+    // Lorsque quelqu'un accède à la racine, renvoyez "index.html"
+    res.sendFile(path.join(__dirname, '../index.html'));
 });
 
 app.listen(port, () => console.log('Server listening on port ' + port));
