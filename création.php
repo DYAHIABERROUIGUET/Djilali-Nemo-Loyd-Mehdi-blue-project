@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="main.css" rel="stylesheet">
+    <script src="cookie.js"></script>
 </head>
 
 <body>
@@ -20,11 +21,11 @@
 
     <div class="objet">
 
-        <input type="checkbox" class="single-checkbox" id="" name="" value="objet1">
+        <input type="checkbox" class="single-checkbox" id="ob" name="" value="objet1">
         <label for="objet1">Trèfle à quatre feuilles</label><br>
-        <input type="checkbox" class="single-checkbox" id="" name="" value="objet2">
+        <input type="checkbox" class="single-checkbox" id="ob" name="" value="objet2">
         <label for="objet2">Bénédiction des dieux</label><br>
-        <input type="checkbox" class="single-checkbox" id="" name="" value="objet3">
+        <input type="checkbox" class="single-checkbox" id="ob" name="" value="objet3">
         <label for="objet3">Bonne étoile</label><br>
 
     </div>
