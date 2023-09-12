@@ -105,3 +105,31 @@ input[type="radio"]:checked + label::before {
 
 /* Styles pour le reste du contenu (tel que précédemment défini) */
 /* ... (insérez ici le reste de votre style CSS précédent) ... */
+/* Styles pour l'image de fond */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/img/image5.jpeg); /* Remplacez 'chemin/vers/votre-image.jpg' par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Met l'image en arrière-plan */
+}
+
+/* Styles pour le conteneur au centre */
+.container {
+    position: relative; /* Ajout d'une position relative pour empiler le contenu sur l'image de fond */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgba(247, 247, 247, 0.8); /* Ajoute une légère opacité au conteneur */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour le reste du contenu (tel que précédemment défini) */
+/* ... (insérez ici le reste de votre style CSS précédent) ... */
