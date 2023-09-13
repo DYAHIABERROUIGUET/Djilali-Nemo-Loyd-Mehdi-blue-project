@@ -27,22 +27,23 @@ app.get('/api/events', (req, res) => {
     });
 });
 
-    // app.post("/test", (req, res) => {
-    //     console.log(req.body);
-    //     res.send("i love ynov POST"); // Utilisez res.send() pour envoyer la réponse
-    // });
+    app.get("/test/:id", (req, res) => {
+        console.log(req.params);
+        res.send("i love ynov test get"); // Utilisez res.send() pour envoyer la réponse
+    });
 
     app.post("/test", (req, res) => {
         console.log(req.body);
-        const formData = req.body;
+
         const filePath = "data.json";
-        let jsonData = {};
-    try {
-        const fileContents = fs.readFileSync(filePath, "utf-8");
-        jsonData = JSON.parse(fileContents);
-    } catch (error) {
-    }
-    jsonData.formData = formData;
+
+        // preparation data
+        let TotalAlignment = parseInt(req.body.alignmentQuestion1) + parseInt(req.body.alignmentQuestion2) + parseInt(req.body.alignmentQuestion3)
+        let jsonData = {
+            "username" : req.body.username,
+            "startingItem" : req.body.startingItem,
+            "alignment" : TotalAlignment
+        };
 
     fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
 

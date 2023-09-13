@@ -1,9 +1,5 @@
 {
-  "formData": {
-    "username": "azerty",
-    "startingItem": "Objet 3",
-    "alignmentQuestion1": "20",
-    "alignmentQuestion2": "-20",
-    "alignmentQuestion3": "20"
-  }
+  "username": "biteu",
+  "startingItem": "Objet 2",
+  "alignment": 15
 }
