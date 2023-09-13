@@ -25,7 +25,7 @@
 .button-22 {
   align-items: center;
   appearance: button;
-  background-color: rgba(237, 237, 237, 0.5);
+  background-color: rgba(23, 23, 23, 0.7);
   border-radius: 8px;
   border-style: none;
   box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
@@ -39,7 +39,7 @@
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
-  padding: 20px 30px;
+  padding: 50px 50px;
   text-align: center;
   text-transform: none;
   transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
