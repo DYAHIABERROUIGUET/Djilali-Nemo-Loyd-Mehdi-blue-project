@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Royaume de BLUE</title>
+</head>
+<body>
+   <div>
+    <form action="http://localhost:3000/test" method="POST"></form>
+    <div id="createPlayerForm" class="container hidden">
+        <h2>Créer un joueur</h2>
+        <form id="playerForm">
+            <label for="username">Nom du joueur:</label>
+            <input type="text" id="username" name="username" required pattern="[A-Za-z][a-z]{2,15}">
+            
+            <label for="startingItem">Objet de départ:</label>
+            <select id="startingItem" name="startingItem">
+                <option value="Objet 1">Objet 1</option>
+                <option value="Objet 2">Objet 2</option>
+                <option value="Objet 3">Objet 3</option>
+            </select>
+            
+            <h3>Alignement de base</h3>
+            <label for="alignmentQuestion1">Question 1: Votre choix 1 ou 2?</label>
+            <input type="radio" id="alignmentQuestion1" name="alignmentQuestion1" value="20">1
+            <input type="radio" name="alignmentQuestion1" value="-20">2
+            <br>
+            
+            <label for="alignmentQuestion2">Question 2: Votre choix 1 ou 2?</label>
+            <input type="radio" id="alignmentQuestion2" name="alignmentQuestion2" value="20">1
+            <input type="radio" name="alignmentQuestion2" value="-20">2
+            <br>
+            
+            <label for="alignmentQuestion3">Question 3: Votre choix 1 ou 2?</label>
+            <input type="radio" id="alignmentQuestion3" name="alignmentQuestion3" value="20">1
+            <input type="radio" name="alignmentQuestion3" value="-20">2
+            <br>
+            
+            <div id="createPlayerForm" class="container hidden">
+                <h2>Créer un joueur</h2>
+                <form id="playerForm">
+                    <!-- (Champs de formulaire) -->
+                    <button type="submit">Créer votre joueur</button>
+                </form>
+            </div>
+        </div>
+            
+            
+            <script src="script.js"></script>
+            </body>
+            </html>
+
