@@ -8,21 +8,15 @@ const app = express();
 const fs = require('fs');
 const filePath = 'data.json';
 
-// fs.readFile(filePath, 'utf8', (err, data) => {
-//   if (err) {
-//     console.error(err);
-//     return;
-//   }
-//   const jsonData = JSON.parse(data);
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json())
 
-//   jsonData.formData.alignmentQuestion2 = -200;
-//   const updatedJson = JSON.stringify(jsonData, null, 4);
-
-//   fs.writeFile(filePath, updatedJson, 'utf8', (err) => {
-//     if (err) {
-//       console.error(err);
-//       return;
-//     }
-//     console.log("Données mises à jour avec succès.");
-//   });
-// });
+app.post("/test", (req, res) => {
+        console.log(req.body);
+        let jsonData = {
+            "username" : req.body.username,
+            "startingItem" : req.body.startingItem,
+            "alignment" : TotalAlignment - 200,
+            "inventory": []
+        };
+    })

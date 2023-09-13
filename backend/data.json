@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "username": "dqs",
   "startingItem": "Objet 1",
+=======
+  "username": "biteu",
+  "startingItem": "Objet 2",
+>>>>>>> db09e24dba5347ef7b4ded3b1b945326d0f69a9c
   "alignment": 10,
   "inventory": []
 }
