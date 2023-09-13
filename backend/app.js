@@ -8,6 +8,7 @@ const port = 3000;
 
 // Use bodyParser to handle form data
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json())
 
 // Set a root directory for static files
 app.use(express.static(path.join(__dirname, '../')));
@@ -27,5 +28,12 @@ app.get('/api/events', (req, res) => {  // <-- Added this block
         res.json(JSON.parse(data));
     });
 });
+
+app.post("/test",(req,res) => {
+    console.log(req.body);
+    res.send("i love ynov POST")
+})
+
+
 
 app.listen(port, () => console.log('Server listening on port ' + port));
