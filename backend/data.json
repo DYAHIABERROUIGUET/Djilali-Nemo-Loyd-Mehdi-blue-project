@@ -1,6 +1,10 @@
 {
   "username": "biteu",
   "startingItem": "Objet 2",
+<<<<<<< Updated upstream
   "alignment": 10,
   "inventory": []
+=======
+  "alignment": 0
+>>>>>>> Stashed changes
 }
