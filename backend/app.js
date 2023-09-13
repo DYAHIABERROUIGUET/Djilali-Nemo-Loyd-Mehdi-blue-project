@@ -48,7 +48,7 @@ app.get('/api/events', (req, res) => {  // <-- Added this block
 
     fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
 
-    res.send("Données enregistrées avec succès !");
+    res.redirect("/")
     });
 
 
