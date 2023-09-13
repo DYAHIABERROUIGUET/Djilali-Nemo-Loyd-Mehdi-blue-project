@@ -52,5 +52,9 @@ app.get('/api/events', (req, res) => {
     });
 
 
+    app.use(bodyParser.json());
+
+    // Charger les données initiales depuis le fichier JSON
+    const data = JSON.parse(fs.readFileSync('data.json', 'utf8'));
 
 app.listen(port, () => console.log('Server listening on port ' + port));
