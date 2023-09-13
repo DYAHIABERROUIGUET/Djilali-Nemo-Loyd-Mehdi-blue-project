@@ -61,7 +61,7 @@ button {
   box-shadow: var(--shadow-color) 2px 2px 22px;
   border-radius: 4px; 
   z-index: 0;  
-  overflow: hidden;   
+  overflow: hidden;  
 }
 
 button:focus {
