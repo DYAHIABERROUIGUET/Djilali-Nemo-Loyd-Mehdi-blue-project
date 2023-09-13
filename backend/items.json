@@ -1,0 +1,28 @@
+{
+    "objet": [
+        {
+            "id": 1,
+            "name": "Trèfle à quatre feuilles",
+            "description": "augmente l’or de base du joueur.",
+            "price": 50,
+            "effect": "",
+            "rareté": "Commune"
+        },
+        {
+            "id": 2,
+            "name": "Bénédiction des dieux",
+            "description": "augmente le niveau d’alignement de base du joueur.",
+            "price": 50,
+            "effect": "",
+            "rareté": "Commune"
+        },
+        {
+            "id": 3,
+            "name": "Bonne étoile",
+            "description": "augmente légèrement l’or et le niveau d’alignement de base du joueur.",
+            "price": 50,
+            "effect": "",
+            "rareté": "Commune"
+        }
+    ]
+}

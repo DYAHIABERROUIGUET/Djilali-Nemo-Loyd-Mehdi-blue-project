@@ -1,0 +1,12 @@
+{
+    "perso":[
+    {
+        "name": "John",
+        "email": "john@example.com"
+    },
+    {
+        "name": "",
+        "email": ""
+    }
+]
+}

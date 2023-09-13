@@ -1,0 +1,17 @@
+{
+    "username": "NomUtilisateur",
+    "alignment": 0,
+    "gold": 100,
+    "inventory": {
+      "contenu": [
+        {
+            "id": 0,
+            "name": "",
+            "description": "",
+            "price": 0,
+            "effect": "",
+            "rareté": ""
+        }
+      ]
+    }
+  }

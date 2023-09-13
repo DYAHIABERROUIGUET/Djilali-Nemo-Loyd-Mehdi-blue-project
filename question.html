@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire interactif</title>
+</head>
+<body>
+    <h1>Questionnaire interactif</h1>
+    <div id="events">
+        <p id="description"></p>
+        <div id="reponse" onchange="questionSuivante()">
+            <button value="a" id="description"></button>
+            <button value="b" id="description"></button>
+        </div>
+    </div>
+
+    <header></header>
+    <section></section>
+    
+    <script>
+
+        var header = document.querySelector("header");
+        var section = document.querySelector("section");
+
+        var requestSRC = "events.json";
+
+        // var eventsData;
+        // var questionIndex = 0;
+        // var reponseSelect = document.getElementById('reponse');
+
+        // // Charger le fichier JSON
+        // fetch('backend/events.json')
+        // .then(response => response.json())
+        // .then(data => {
+        //     eventsData = data;
+        //     initialiserQuestion();  // Initialiser la première question une fois le fichier JSON chargé
+        // });
+
+        // function initialiserQuestion() {
+        //     var event = eventsData.events[questionIndex];
+        //     var questionContainer = document.getElementById('question');
+            
+        //     questionContainer.textContent = event.description || "Question " + (questionIndex + 1);
+        //     reponseSelect.innerHTML = '<option value="">Sélectionnez une réponse</option>';
+            
+        //     event.choix.reponse.forEach(function(reponse) {
+        //         var option = document.createElement('option');
+        //         option.value = reponse.effect;
+        //         option.textContent = reponse.a || reponse.b;
+        //         reponseSelect.appendChild(option);
+        //     });
+        // }
+
+        // function questionSuivante() {
+        //     var reponse = reponseSelect.value;
+            
+        //     // Sauvegarde de la réponse de l'utilisateur
+            
+        //     // Passage à la question suivante si disponible
+        //     if (questionIndex < eventsData.events.length - 1) {
+        //         questionIndex++;
+        //         initialiserQuestion();
+        //     } else {
+        //         var questionContainer = document.getElementById('question-container');
+        //         questionContainer.innerHTML = "<p>Fin du questionnaire.</p>";
+        //     }
+        // }
+    </script>
+</body>
+</html>
