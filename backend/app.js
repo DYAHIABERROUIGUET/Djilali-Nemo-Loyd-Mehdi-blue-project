@@ -42,7 +42,8 @@ app.get('/api/events', (req, res) => {
         let jsonData = {
             "username" : req.body.username,
             "startingItem" : req.body.startingItem,
-            "alignment" : TotalAlignment
+            "alignment" : TotalAlignment,
+            "inventory": []
         };
 
     fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
