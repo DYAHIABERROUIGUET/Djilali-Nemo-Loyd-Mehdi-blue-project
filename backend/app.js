@@ -5,7 +5,9 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const port = 3000;
+const data = require('./events.json');
 
+let jsonData;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
@@ -31,14 +33,18 @@ app.get('/api/events', (req, res) => {
         res.send("i love ynov test get"); 
     });
 
+    app.put("/update/alignement",(req, res) => {
+
+
+
+    })
+
     app.post("/test", (req, res) => {
         console.log(req.body);
-
         const filePath = "data.json";
-
         // preparation data
         let TotalAlignment = parseInt(req.body.alignmentQuestion1) + parseInt(req.body.alignmentQuestion2) + parseInt(req.body.alignmentQuestion3)
-        let jsonData = {
+        jsonData = {
             "username" : req.body.username,
             "startingItem" : req.body.startingItem,
             "alignment" : TotalAlignment,
@@ -48,7 +54,30 @@ app.get('/api/events', (req, res) => {
 
     res.redirect("question.html")
     });
-
-
+    
+    app.get('/events/:id', (req, res) => {
+        const id = parseInt(req.params.id);
+        const events = data.events;
+        const event = events.find(s => s.id === id);
+    
+        if (event) {
+            const choixA = event.choix.reponse.find(choix => choix.a === 'a');
+            const choixB = event.choix.reponse.find(choix => choix.b === 'b');
+    
+            const htmlResponse = `
+                <h2>Description de l'événement</h2>
+                <p>${event.description}</p>
+                <input type="radio" id="choixA" name="choix" value="a">
+                <label for="choixA">Choix A</label>
+    
+                <input type="radio" id="choixB" name="choix" value="b">
+                <label for="choixB">Choix B</label>
+                `;
+    
+            res.send(htmlResponse);
+        } else {
+            res.status(404).send('Événement non trouvé');
+        }
+    });
 
 app.listen(port, () => console.log('Server listening on port ' + port));

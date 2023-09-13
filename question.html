@@ -4,18 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script/main.js"></script>
 </head>
 <body>
     <h1>Événement</h1>
-    <button onclick="redirectToEventsPage()">Jouer</button>
+    <button id="fetchButton">Afficher Événement Suivant</button>
     <div id="eventData"></div>
+
     
 </body>
-    <script>
-        function redirectToEventsPage() {
-            // Rediriger vers la page qui affiche les événements
-            window.location.href = "http://localhost:3000";
+<script>
+    const filePath = "data.json";
+    const fetchButton = document.getElementById('fetchButton');
+    let currentEventId = 1; // ID de l'événement actuel
+
+    fetchButton.addEventListener('click', () => {
+        // Effectuer une requête AJAX pour récupérer les données de l'événement suivant
+        fetch('/events/' + currentEventId)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('eventData').innerHTML = data;
+                currentEventId++; // Passer à l'événement suivant
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des données :', error);
+            });
+    });
+
+    // Fonction pour gérer le choix sélectionné
+    function handleChoice() {
+        
+        const events = data.events;
+        const event = events.find(s => s.id === currentEventId);
+        const choixA = document.getElementById('choixA');
+        const choixB = document.getElementById('choixB');
+
+
+
+        if (choixA.checked) {
+            // Le choix A est sélectionné
+            // Ajoutez ici la logique pour gérer le choix A
+            
+            alert("Choix A sélectionné");
+        } else if (choixB.checked) {
+            // Le choix B est sélectionné
+            // Ajoutez ici la logique pour gérer le choix B
+            
+            alert("Choix B sélectionné");
+        } else {
+            // Aucun choix sélectionné
+            alert("Aucun choix sélectionné");
         }
-    </script>
+        fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
+    }
+
+    // Ajoutez un gestionnaire d'événements pour les changements de sélection
+    const radioInputs = document.querySelectorAll('input[type=radio]');
+    radioInputs.forEach(input => {
+        input.addEventListener('change', handleChoice);
+    });
+    
+</script>
 </html>
