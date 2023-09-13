@@ -29,10 +29,30 @@ app.get('/api/events', (req, res) => {  // <-- Added this block
     });
 });
 
-app.post("/test",(req,res) => {
-    console.log(req.body);
-    req.send("i love ynov POST")
-})
+    // app.post("/test", (req, res) => {
+    //     console.log(req.body);
+    //     res.send("i love ynov POST"); // Utilisez res.send() pour envoyer la réponse
+    // });
+
+    app.post("/test", (req, res) => {
+        console.log(req.body);
+        res.send("i love ynov POST");
+        const formData = req.body;
+        const filePath = "data.json";
+        let jsonData = {};
+    try {
+        const fileContents = fs.readFileSync(filePath, "utf-8");
+        jsonData = JSON.parse(fileContents);
+    } catch (error) {
+        // Le fichier n'existe peut-être pas encore, c'est OK
+    }
+    jsonData.formData = formData;
+
+    // Enregistrez les données mises à jour dans le fichier JSON
+    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
+
+    res.send("Données enregistrées avec succès !");
+    });
 
 
 
