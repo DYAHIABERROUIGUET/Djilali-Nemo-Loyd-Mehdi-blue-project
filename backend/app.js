@@ -31,7 +31,7 @@ app.get('/api/events', (req, res) => {  // <-- Added this block
 
 app.post("/test",(req,res) => {
     console.log(req.body);
-    res.send("i love ynov POST")
+    req.send("i love ynov POST")
 })
 
 
