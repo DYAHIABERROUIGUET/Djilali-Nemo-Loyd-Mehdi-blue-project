@@ -74,6 +74,26 @@
         },
         {
             "id": 5,
+            "description": "Vous rencontrez un marchant, celui ci vous montre toutes ses dernières trouvailles et s'exclame,'Est vous interresé ?'",
+            "choix": {
+                "reponse": [
+                    {
+                        "a": "a",
+                        "choix_a": "Bénédiction des dieux",
+                        "effect": 50,
+                        "price" : -80
+                    },
+                    {
+                        "b": "b",
+                        "choix_b": "Pomme d'Adan",
+                        "effect": -60,
+                        "price" : -80
+                    }
+                ]
+            }
+        },
+        {
+            "id": 6,
             "description": "Vous avez la possibilité de révéler la vérité qui condamnera un innocent ou de garder le silence pour éviter des conflits. Que choisissez-vous ?",
             "choix": {
                 "reponse": [
@@ -91,7 +111,7 @@
             }
         },
         {
-            "id": 6,
+            "id": 7,
             "description": "Une forêt ancienne doit être détruite pour construire une route vitale pour la ville. Votez-vous pour sa préservation au risque de causer des difficultés économiques ?",
             "choix": {
                 "reponse": [
@@ -109,7 +129,7 @@
             }
         },
         {
-            "id": 7,
+            "id": 8,
             "description": "Vous avez un artefact magique puissant qui pourrait être utilisé pour le bien ou le mal. Le détruisez-vous pour éviter qu'il ne tombe entre de mauvaises mains ?",
             "choix": {
                 "reponse": [
@@ -127,7 +147,7 @@
             }
         },
         {
-            "id": 8,
+            "id": 9,
             "description": "Vous êtes témoin d'une dispute entre deux races magiques. Intervenez-vous pour les aider à trouver un compromis pacifique ?",
             "choix": {
                 "reponse": [
@@ -145,7 +165,7 @@
             }
         },
         {
-            "id": 9,
+            "id": 10,
             "description": "Un ami a commis un acte immoral. Le dénoncez-vous ou le protégez-vous ?",
             "choix": {
                 "reponse": [
@@ -163,7 +183,7 @@
             }
         },
         {
-            "id": 10,
+            "id": 11,
             "description": "Vous découvrez que la personne que vous admirez le plus a un passé sombre et inavouable. Poursuivez-vous votre admiration pour elle ?",
             "choix": {
                 "reponse": [

@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="question.css" rel="stylesheet">
+    <link href="css/question.css" rel="stylesheet">
     <script src="question.js"></script>
 </head>
 <body>
     <header>
         <div class="container_header"> 
-            <p id="username"></p>
+            <p class="utilisateur" id="username"></p>
             <p id="gold"></p>
             <p id="alignment"></p>
             <p>Inventaire</p>
         </div>
     </header>
-    <h1>Événement</h1>
-    <button id="fetchButton">Afficher Événement Suivant</button>
-    <div id="eventData"></div>
+
+    <div class="body">
+        <div id="createPlayerForm" class="container hidden">
+            <h2>Événement</h2>
+            <button id="fetchButton">Afficher Événement Suivant</button>    
+
+            <div id="createPlayerForm" class="container hidden">
+                <div id="eventData"></div>
+                    
+            </div>
+        </div>
+    </div>  
+    <h1></h1>
+    
+    
 
     
 </body>

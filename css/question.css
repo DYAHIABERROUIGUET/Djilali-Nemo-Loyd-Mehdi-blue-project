@@ -1,0 +1,72 @@
+
+.container_header {
+    height: 100px;
+    background-color: rgba(255, 255, 255,.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    display: flex; /* Utilisation de flexbox pour gérer l'alignement */
+    justify-content: flex-end; /* Alignez tout le contenu vers la droite */
+}
+
+.container_header p {
+    display: inline;
+    color: blue;
+    font-size: 50px;
+    margin: 10px 50px;
+    text-align: right; /* Alignez le texte à droite */
+}
+
+/* Appliquez un style spécifique pour #username pour aligner à gauche */
+#username {
+    text-align: left;
+    margin-right: auto; /* Poussez le nom du joueur à gauche autant que possible */
+}
+
+
+body{
+    background-image: url(../assets/img/Troisième.jpg);
+    background-size: cover;  /* Ajuste l'image pour qu'elle couvre entièrement l'élément */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.body {
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255,.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+

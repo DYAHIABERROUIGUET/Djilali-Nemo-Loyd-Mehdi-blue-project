@@ -55,6 +55,7 @@ app.get('/api/events', (req, res) => {
     res.redirect("question.html")
     });
     
+    // Votre route pour afficher l'événement et gérer la réponse
     app.get('/events/:id', (req, res) => {
         const id = parseInt(req.params.id);
         const events = data.events;
@@ -63,15 +64,16 @@ app.get('/api/events', (req, res) => {
         if (event) {
             const choixA = event.choix.reponse.find(choix => choix.a === 'a');
             const choixB = event.choix.reponse.find(choix => choix.b === 'b');
-    
+            
+
             const htmlResponse = `
                 <h2>Description de l'événement</h2>
                 <p>${event.description}</p>
                 <input type="radio" id="choixA" name="choix" value="a">
-                <label for="choixA">Choix A</label>
+                <label for="choixA">${choixA.choix_a}</label>
     
                 <input type="radio" id="choixB" name="choix" value="b">
-                <label for="choixB">Choix B</label>
+                <label for="choixB">${choixB.choix_b}</label>
                 `;
     
             res.send(htmlResponse);
