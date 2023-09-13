@@ -46,7 +46,7 @@ app.get('/api/events', (req, res) => {
         };
     fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
 
-    res.redirect("/")
+    res.redirect("question.html")
     });
 
 
