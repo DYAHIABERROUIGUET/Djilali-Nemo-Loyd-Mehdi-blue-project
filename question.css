@@ -1,0 +1,18 @@
+header {
+    background-color: black; /* Utilisez un point-virgule (;) pour séparer les propriétés CSS */
+}
+
+.container_header {
+    height: 100px;
+    background-color: black;
+    display: inline-block;
+    width: fit-content;
+    
+}
+
+.container_header p {
+    display: inline; /* Utilisez "inline" pour les éléments inline, ou "inline-block" pour les éléments en bloc */
+    color: aliceblue;
+    font-size: 50px;
+    margin: 10px 50px;
+}
