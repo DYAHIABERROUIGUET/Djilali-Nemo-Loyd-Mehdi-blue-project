@@ -2,35 +2,35 @@
     "events": [
         {
             "id": 1,
-            "description": "aaaaaaaaaa",
+            "description": "Un dragon solitaire garde un trésor inestimable. Acceptez-vous de le voler pour aider une cause juste ?",
             "choix": {
                 "reponse": [
                     {
                         "a": "a",
-                        "description": "aaaaaaa",
-                        "effect": ""
+                        "choix_a": "OUI",
+                        "effect": -10
                     },
                     {
                         "b": "b",
-                        "description": "",
-                        "effect": ""
+                        "choix_b": "NON",
+                        "effect": 200
                     }
                 ]
             }
         },
         {
             "id": 2,
-            "description": "",
+            "description": "Un gobelin vous demande de l'aide pour voler une potion magique nécessaire pour sauver sa tribu. Acceptez-vous ?",
             "choix": {
                 "reponse": [
                     {
                         "a": "a",
-                        "description": "",
+                        "choix_a": "OUI",
                         "effect": ""
                     },
                     {
                         "b": "b",
-                        "description": "",
+                        "choix_b": "NON",
                         "effect": ""
                     }
                 ]
@@ -38,17 +38,17 @@
         },
         {
             "id": 3,
-            "description": "",
+            "description": "Vous trouvez une créature magique blessée. Elle semble inoffensive, mais vous craignez qu'elle puisse être dangereuse. L'aidez-vous ?",
             "choix": {
                 "reponse": [
                     {
                         "a": "a",
-                        "description": "",
+                        "choix_a": "OUI",
                         "effect": ""
                     },
                     {
                         "b": "b",
-                        "description": "",
+                        "choix_b": "NON",
                         "effect": ""
                     }
                 ]
@@ -56,17 +56,17 @@
         },
         {
             "id": 4,
-            "description": "",
+            "description": "Un mage maléfique vous propose une grande puissance en échange de votre loyauté. Acceptez-vous sa proposition pour le bien commun ?",
             "choix": {
                 "reponse": [
                     {
                         "a": "a",
-                        "description": "",
+                        "choix_a": "OUI",
                         "effect": ""
                     },
                     {
                         "b": "b",
-                        "description": "",
+                        "choix_b": "NON",
                         "effect": ""
                     }
                 ]
@@ -74,17 +74,17 @@
         },
         {
             "id": 5,
-            "description": "",
+            "description": "Vous avez la possibilité de révéler la vérité qui condamnera un innocent ou de garder le silence pour éviter des conflits. Que choisissez-vous ?",
             "choix": {
                 "reponse": [
                     {
                         "a": "a",
-                        "description": "",
+                        "choix_a": "OUI",
                         "effect": ""
                     },
                     {
                         "b": "b",
-                        "description": "",
+                        "choix_b": "NON",
                         "effect": ""
                     }
                 ]
@@ -92,17 +92,17 @@
         },
         {
             "id": 6,
-            "description": "",
+            "description": "Une forêt ancienne doit être détruite pour construire une route vitale pour la ville. Votez-vous pour sa préservation au risque de causer des difficultés économiques ?",
             "choix": {
                 "reponse": [
                     {
                         "a": "a",
-                        "description": "",
+                        "choix_a": "OUI",
                         "effect": ""
                     },
                     {
                         "b": "b",
-                        "description": "",
+                        "choix_b": "NON",
                         "effect": ""
                     }
                 ]
@@ -110,17 +110,17 @@
         },
         {
             "id": 7,
-            "description": "",
+            "description": "Vous avez un artefact magique puissant qui pourrait être utilisé pour le bien ou le mal. Le détruisez-vous pour éviter qu'il ne tombe entre de mauvaises mains ?",
             "choix": {
                 "reponse": [
                     {
                         "a": "a",
-                        "description": "",
+                        "choix_a": "OUI",
                         "effect": ""
                     },
                     {
                         "b": "b",
-                        "description": "",
+                        "choix_b": "NON",
                         "effect": ""
                     }
                 ]
@@ -128,17 +128,17 @@
         },
         {
             "id": 8,
-            "description": "",
+            "description": "Vous êtes témoin d'une dispute entre deux races magiques. Intervenez-vous pour les aider à trouver un compromis pacifique ?",
             "choix": {
                 "reponse": [
                     {
                         "a": "a",
-                        "description": "",
+                        "choix_a": "OUI",
                         "effect": ""
                     },
                     {
                         "b": "b",
-                        "description": "",
+                        "choix_b": "NON",
                         "effect": ""
                     }
                 ]
@@ -146,17 +146,17 @@
         },
         {
             "id": 9,
-            "description": "",
+            "description": "Un ami a commis un acte immoral. Le dénoncez-vous ou le protégez-vous ?",
             "choix": {
                 "reponse": [
                     {
                         "a": "a",
-                        "description": "",
+                        "choix_a": "OUI",
                         "effect": ""
                     },
                     {
                         "b": "b",
-                        "description": "",
+                        "choix_b": "NON",
                         "effect": ""
                     }
                 ]
@@ -164,17 +164,17 @@
         },
         {
             "id": 10,
-            "description": "",
+            "description": "Vous découvrez que la personne que vous admirez le plus a un passé sombre et inavouable. Poursuivez-vous votre admiration pour elle ?",
             "choix": {
                 "reponse": [
                     {
                         "a": "a",
-                        "description": "",
+                        "choix_a": "OUI",
                         "effect": ""
                     },
                     {
                         "b": "b",
-                        "description": "",
+                        "choix_b": "NON",
                         "effect": ""
                     }
                 ]
