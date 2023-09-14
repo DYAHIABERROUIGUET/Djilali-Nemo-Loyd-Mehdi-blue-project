@@ -1,6 +1,7 @@
 {
-  "username": "biteh",
-  "startingItem": "Objet 2",
-  "alignment": -60,
+  "username": "bite",
+  "startingItem": "Sac d'Écume d'Or",
+  "alignment": -20,
+  "gold": 100,
   "inventory": []
 }

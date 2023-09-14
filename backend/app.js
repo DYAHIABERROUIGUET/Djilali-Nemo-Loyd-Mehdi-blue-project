@@ -43,6 +43,7 @@ app.get('/api/events', (req, res) => {
         console.log(req.body);
         const filePath = "data.json";
         // preparation data
+        
         let TotalAlignment = parseInt(req.body.alignmentQuestion1) + parseInt(req.body.alignmentQuestion2) + parseInt(req.body.alignmentQuestion3)
         gold = 100;
         jsonData = {
