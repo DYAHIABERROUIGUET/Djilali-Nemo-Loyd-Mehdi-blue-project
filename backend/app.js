@@ -96,9 +96,9 @@ app.post("/event/data/:id", (req, res) => {
     fs.writeFileSync(filePath, JSON.stringify(dataJson, null, 2));
     let id_question = Math.floor(Math.random() * (11 - 1+ 1)) + 1;
     console.log(id_question)
-    if (dataJson.alignment <= 0){
-        res.redirect('/redi')
-    }
+    // if (dataJson.alignment <= 0){
+    //     res.redirect('/redi')
+    // }
     res.redirect(`/question?q=${id_question}`)
 })
 
