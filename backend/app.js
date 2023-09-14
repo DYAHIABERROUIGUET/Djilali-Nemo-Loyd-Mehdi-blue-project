@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 const data = require('./events.json');
+var http = require("http");
 
 let jsonData;
 
@@ -95,8 +96,16 @@ app.post("/event/data/:id", (req, res) => {
     fs.writeFileSync(filePath, JSON.stringify(dataJson, null, 2));
     let id_question = Math.floor(Math.random() * (11 - 1+ 1)) + 1;
     console.log(id_question)
+    if (dataJson.alignment <= 0){
+        res.redirect('/redi')
+    }
     res.redirect(`/question?q=${id_question}`)
 })
+
+app.get('/redi', (req, res) => {
+    // Redirigez vers la page "gameover.html"
+    res.redirect('/gameover.html');
+});
 
 
 app.listen(port, () => console.log('Server listening on port ' + port));
