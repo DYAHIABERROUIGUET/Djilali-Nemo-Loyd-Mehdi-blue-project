@@ -1,20 +1,17 @@
 {
   "username": "bite",
   "startingItem": "Inventaire : Sac d'Écume d'Or",
-  "alignment": -40,
+  "alignment": -130,
   "argent": "Argent : 100$",
-  "inventory": [],
+  "inventory": [
+    "Sac d'Écume d'Or"
+  ],
   "questionTime": [
-    2,
-    8,
-    4,
-    7,
-    11,
-    5,
-    3,
     10,
-    1,
-    9,
-    6
+    8,
+    3,
+    4,
+    6,
+    5
   ]
 }

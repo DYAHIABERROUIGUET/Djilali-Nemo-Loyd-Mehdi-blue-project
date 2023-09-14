@@ -43,7 +43,7 @@ app.post("/player", (req, res) => {
         "startingItem": "Inventaire : " + req.body.startingItem,
         "alignment": TotalAlignment,
         "argent": "Argent : " + 100 + "$",
-        "inventory": [],
+        "inventory": [req.body.startingItem],
         "questionTime": []
     };
     fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
@@ -96,7 +96,7 @@ app.post("/event/data/:id", (req, res) => {
 
     if(dataJson.questionTime.length >= 11){
         res.redirect('/gameover.html');
-        return; // Arrêtez l'exécution du reste du code ici pour éviter des erreurs supplémentaires.
+        return; // Arret code 
     }
 
     let id_question = Math.floor(Math.random() * (11 - 1 + 1)) + 1;

@@ -79,14 +79,14 @@
                 "reponse": [
                     {
                         "a": "a",
-                        "choix_a": "Bénédiction des dieux",
+                        "choix_a": "Bénédiction des dieux 50$ (Cela augmentera votre alignement celeste)",
                         "effect": 50,
-                        "price" : -80
+                        "price" : -50
                     },
                     {
                         "b": "b",
-                        "choix_b": "Pomme d'Adan",
-                        "effect": -60,
+                        "choix_b": "Pomme d'Adan  80$ (Cela augmentera votre alignement celeste)",
+                        "effect": 80,
                         "price" : -80
                     }
                 ]
