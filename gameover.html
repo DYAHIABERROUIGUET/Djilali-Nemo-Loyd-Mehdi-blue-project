@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Royaume de BLUE</title>
     <link href="css/main.css" rel="stylesheet">
-    <script src=""></script>
+    <link href="css/gameover.css" rel="stylesheet">
+    <script src="gameover.js"></script>
 </head>
 
 <body>
     <div class="arriere">
         <div class="container">
-            <a href="index.html">
-                    <div class="left"></div>
-                      GAME OVER
-                    <div class="right"></div>
-                  </button>
-            </a>
+            <div class="left"></div>
+            GAME OVER
+            <div class="right"></div>
+            <div class="phrase_score_container">
+                <span class="phrase_score" id="remarks"></span>
+            </div>
+            <button onclick="location.href='index.html'">Rejouer</button>
         </div>
     </div>
-<script src="/backend/change.js"></script>
+    <script src="/backend/change.js"></script>
 </body>
-
 
 </html>
