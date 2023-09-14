@@ -1,22 +1,22 @@
 {
-  "username": "Togra",
+  "username": "nemo",
   "startingItem": "Inventaire : Sac d'Écume d'Or",
-  "alignment": -75,
+  "alignment": -35,
   "argent": "Argent : 100$",
   "inventory": [
     "Sac d'Écume d'Or"
   ],
   "questionTime": [
-    9,
+    10,
+    2,
+    5,
     4,
     3,
-    2,
-    10,
-    8,
+    9,
     7,
+    11,
+    8,
     1,
-    6,
-    5,
-    11
+    6
   ]
 }
