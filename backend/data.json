@@ -1,13 +1,7 @@
 {
-<<<<<<< Updated upstream
   "username": "bite",
   "startingItem": "Inventaire : Sac d'Écume d'Or",
-  "alignment": 10,
+  "alignment": -60,
   "argent": "Argent : 100$",
-=======
-  "username": "Togra",
-  "startingItem": "Objet 2",
-  "alignment": 10,
->>>>>>> Stashed changes
   "inventory": []
 }
