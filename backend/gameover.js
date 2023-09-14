@@ -4,22 +4,22 @@ function PhraseScore(data) {
   let remark = null;
   let remarkColor = null;
   if (playerAlignment <= -21 && playerAlignment > -100) {
-    remark = "Démon";
+    remark = "Un démon";
     remarkColor = "red";
   } else if (playerAlignment <= -20 && playerAlignment > 0) {
-    remark = "Mal";
+    remark = "Le mal";
     remarkColor = "orange";
   } else if (playerAlignment >= 1 && playerAlignment < 20) {
-    remark = "Bon";
+    remark = "Un bon";
     remarkColor = "lightgreen";
   } else if (playerAlignment >= 21 && playerAlignment < 100) {
-    remark = "Ange";
+    remark = "Un ange";
     remarkColor = "green";
   }
   
   document.getElementById('remarks').innerHTML = remark;
   document.getElementById('remarks').style.color = remarkColor;
-  document.getElementById('remarks').style.fontSize = "30px";
+  document.getElementById('remarks').style.fontSize = "50px";
 }
 
 function Rejouer() {
