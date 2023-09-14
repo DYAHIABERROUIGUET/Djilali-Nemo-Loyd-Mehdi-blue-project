@@ -20,30 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     xhr.send();
 });
 
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Créez une nouvelle requête XMLHttpRequest
-    var xhr = new XMLHttpRequest();
-
-    // Configurez la requête pour charger data.json
-    xhr.open('GET', 'backend/data.json', true);
-
-    // Configurez la fonction de rappel lorsque la requête est terminée
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            var data = JSON.parse(xhr.responseText);
-            document.getElementById('username').textContent = data.username;
-            document.getElementById('gold').textContent = data.startingItem;
-            document.getElementById('alignment').textContent = data.alignment;
-        }
-    };
-
-    // Envoyez la requête
-    xhr.send();
-});
-
-
-
 // Fonction pour gérer le choix sélectionné
 function handleChoice() {
     // Lisez les données actuelles depuis le fichier JSON
