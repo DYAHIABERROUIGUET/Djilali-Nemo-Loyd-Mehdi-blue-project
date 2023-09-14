@@ -1,7 +1,12 @@
 {
+<<<<<<< Updated upstream
   "username": "bite",
   "startingItem": "Inventaire : Sac d'Écume d'Or",
   "alignment": -60,
+=======
+  "startingItem": "Inventaire : undefined",
+  "alignment": null,
+>>>>>>> Stashed changes
   "argent": "Argent : 100$",
   "inventory": []
 }
