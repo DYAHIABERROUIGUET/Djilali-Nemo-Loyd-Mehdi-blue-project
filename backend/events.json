@@ -8,12 +8,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": -30
+                        "effect": -10
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": 30
+                        "effect": 20
                     }
                 ]
             }
@@ -26,7 +26,7 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": 40
+                        "effect": 10
                     },
                     {
                         "b": "b",
@@ -44,12 +44,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": 60
+                        "effect": 30
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": -60
+                        "effect": -20
                     }
                 ]
             }
@@ -62,12 +62,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": 90
+                        "effect": 5
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": -90
+                        "effect": -40
                     }
                 ]
             }
@@ -80,13 +80,13 @@
                     {
                         "a": "a",
                         "choix_a": "Bénédiction des dieux 50$ (Cela augmentera votre alignement celeste)",
-                        "effect": 50,
+                        "effect": 30,
                         "price" : -50
                     },
                     {
                         "b": "b",
                         "choix_b": "Pomme d'Adan  80$ (Cela augmentera votre alignement celeste)",
-                        "effect": 80,
+                        "effect": 50,
                         "price" : -80
                     }
                 ]
@@ -118,12 +118,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": 30
+                        "effect": 20
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": -30
+                        "effect": -20
                     }
                 ]
             }
@@ -136,12 +136,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": -50
+                        "effect": -30
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": 60
+                        "effect": 20
                     }
                 ]
             }
@@ -154,7 +154,7 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": -80
+                        "effect": -20
                     },
                     {
                         "b": "b",
@@ -172,12 +172,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": 90
+                        "effect": 10
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": -40
+                        "effect": -20
                     }
                 ]
             }
@@ -190,7 +190,7 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": -90
+                        "effect": -20
                     },
                     {
                         "b": "b",
