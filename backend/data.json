@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
   "username": "biteu",
   "startingItem": "Inventaire : Sac d'Écume d'Or",
   "alignment": 0,
+=======
+  "username": "dsqd",
+  "startingItem": "Inventaire : Sac d'Écume d'Or",
+  "alignment": 30,
+>>>>>>> c2c7e6504674790eb1fa4cb0302e795ab29eff03
   "argent": "Argent : 100$",
   "inventory": [],
   "questionTime": [
