@@ -91,25 +91,28 @@ app.get('/events/:id', (req, res) => {
 app.post("/event/data/:id", (req, res) => {
     const filePath = "data.json";
     let dataJson = JSON.parse(fs.readFileSync(filePath,'utf8'))
-    dataJson.alignment -= req.body.choix
+    dataJson.alignment -= req.body.choix;
     console.log(dataJson);
+
     if(dataJson.questionTime.length >= 11){
-        res.redirect('/question.html')
+        res.redirect('/gameover.html');
+        return; // Arrêtez l'exécution du reste du code ici pour éviter des erreurs supplémentaires.
     }
-    fs.writeFileSync(filePath, JSON.stringify(dataJson, null, 2));
-    let id_question = Math.floor(Math.random() * (11 - 1+ 1)) + 1;
-    console.log(id_question)
-    // if (dataJson.alignment <= 0){
-    //     res.redirect('/redi')
-    // }
+
+    let id_question = Math.floor(Math.random() * (11 - 1 + 1)) + 1;
+    console.log(id_question);
+
     while (dataJson.questionTime.includes(id_question)) {
         id_question = Math.floor(Math.random() * 11) + 1;
     }
-    jsonData.questionTime.push(id_question);
-    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
-    console.log(dataJson.dataJson);
-    res.redirect(`/question?q=${id_question}`)
-})
+
+    dataJson.questionTime.push(id_question);
+    console.log(dataJson.questionTime);
+
+    fs.writeFileSync(filePath, JSON.stringify(dataJson, null, 2));
+    res.redirect(`/question?q=${id_question}`);
+});
+
 
 app.get('/redi', (req, res) => {
     // Redirigez vers la page "gameover.html"
