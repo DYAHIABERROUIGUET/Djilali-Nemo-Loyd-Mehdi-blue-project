@@ -17,20 +17,13 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../index.html'));
 });
 
-// ...
-
-// Nouvelle route pour mettre à jour la valeur de l'alignment
+//nouvelle route pour try le changement de l'alignement
 app.put("/update/alignment", (req, res) => {
-    const newAlignment = req.body.alignment - 20; // La nouvelle valeur d'alignment que vous souhaitez définir
-
-    jsonData.alignment = newAlignment; // Mettez à jour la valeur d'alignment dans jsonData
-
-    // Vous pouvez également enregistrer la nouvelle valeur dans le fichier data.json si nécessaire.
+    const newAlignment = req.body.alignment - 20; // La nouvelle valeur d'alignment
+    jsonData.alignment = newAlignment;
     fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
 
-    res.json({ success: true, message: "Alignment mis à jour avec succès" });
+    res.json({ success: true, message: "Alignment mis à jour avec succès" }); //pour savoir si cela a fonctionner 
 });
-
-// ...
 
 app.listen(port, () => console.log('Server listening on port ' + port));
