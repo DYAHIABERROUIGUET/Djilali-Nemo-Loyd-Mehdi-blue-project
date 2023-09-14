@@ -44,10 +44,12 @@ app.get('/api/events', (req, res) => {
         const filePath = "data.json";
         // preparation data
         let TotalAlignment = parseInt(req.body.alignmentQuestion1) + parseInt(req.body.alignmentQuestion2) + parseInt(req.body.alignmentQuestion3)
+        gold = 100;
         jsonData = {
             "username" : req.body.username,
             "startingItem" : req.body.startingItem,
             "alignment" : TotalAlignment,
+            "gold": gold,
             "inventory": []
         };
     fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
