@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('username').textContent = data.username;
             document.getElementById('gold').textContent = data.startingItem;
             document.getElementById('alignment').textContent = data.alignment;
+            document.getElementById('argent').textContent = data.argent;
         }
     };
 

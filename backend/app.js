@@ -45,12 +45,11 @@ app.get('/api/events', (req, res) => {
         // preparation data
         
         let TotalAlignment = parseInt(req.body.alignmentQuestion1) + parseInt(req.body.alignmentQuestion2) + parseInt(req.body.alignmentQuestion3)
-        gold = 100;
         jsonData = {
             "username" : req.body.username,
-            "startingItem" : req.body.startingItem,
+            "startingItem" : "Inventaire : "+req.body.startingItem,
             "alignment" : TotalAlignment,
-            "gold": gold,
+            "argent": "Argent : "+100+"$",
             "inventory": []
         };
     fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
