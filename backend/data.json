@@ -1,12 +1,22 @@
 {
+<<<<<<< Updated upstream
   "username": "bite",
   "startingItem": "Inventaire : Miroir d'Équilibre",
   "alignment": 35,
+=======
+  "username": "nemo",
+  "startingItem": "Inventaire : Sac d'Écume d'Or",
+  "alignment": 10,
+>>>>>>> Stashed changes
   "argent": "Argent : 100$",
   "inventory": [
     "Miroir d'Équilibre"
   ],
   "questionTime": [
+<<<<<<< Updated upstream
+=======
+    10,
+>>>>>>> Stashed changes
     1,
     3,
     11,
@@ -16,4 +26,8 @@
     9,
     6
   ]
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

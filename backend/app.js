@@ -24,6 +24,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../index.html'));
 });
 
+app.get('/gameover', (req, res) => {
+    res.sendFile(path.join(__dirname, '../gameover.html'));
+    
+});
 
 
 app.get('/api/events', (req, res) => {
@@ -99,7 +103,7 @@ app.post("/event/data/:id", (req, res) => {
     console.log(dataJson);
 
     if(dataJson.questionTime.length >= 11){
-        res.redirect('/gameover.html');
+        res.redirect('/gameover');
         return; // Arret code 
     }
 
@@ -119,8 +123,8 @@ app.post("/event/data/:id", (req, res) => {
 
 
 app.get('/redi', (req, res) => {
-    // Redirigez vers la page "gameover.html"
-    res.redirect('/gameover.html');
+    // Redirigez vers la page "gameover"
+    res.redirect('/gameover');
 });
 
 
