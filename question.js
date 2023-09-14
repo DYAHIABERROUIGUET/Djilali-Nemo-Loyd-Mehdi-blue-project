@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Fonction pour gérer le choix sélectionné
 function handleChoice() {
-    // Lisez les données actuelles depuis le fichier JSON
+    // lecture donne json
     fetch('backend/data.json')
         .then(response => response.json())
         .then(data => {
@@ -31,25 +31,21 @@ function handleChoice() {
 
             if (choixA.checked) {
                 // Le choix A est sélectionné
-                const gain = Math.floor(Math.random() * 60) + 1; // Génère un nombre aléatoire entre 1 et 60
+                const gain = Math.floor(Math.random() * 60) + 1; 
                 data.alignment += gain; // Met à jour le score d'alignment
                 alert("Vous avez gagné : " + gain);
             } else if (choixB.checked) {
                 // Le choix B est sélectionné
-                const perte = Math.floor(Math.random() * 70) + 1; // Génère un nombre aléatoire entre 1 et 70
-                data.alignment -= perte; // Met à jour le score d'alignment
+                const perte = Math.floor(Math.random() * 70) + 1; 
+                data.alignment -= perte;
                 alert("Vous avez perdu : " + perte);
             } else {
-                // Aucun choix sélectionné
+                // Si aucun choix n'est fait
                 alert("Aucun choix sélectionné");
             }
 
-            // Enregistrez les modifications dans le fichier data.json ici.
-            // Vous devrez mettre à jour les données avec les modifications et les enregistrer à nouveau.
-
-            // Utilisez l'API fetch pour enregistrer les données mises à jour
             fetch('backend/data.json', {
-                method: 'PUT', // Vous pouvez utiliser 'PUT' ou 'PATCH' selon vos besoins
+                method: 'PUT', 
                 headers: {
                     'Content-Type': 'application/json'
                 },
