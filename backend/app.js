@@ -1,24 +1,28 @@
-const express = require('express');
-const path = require('path');
-const fs = require('fs');
-const bodyParser = require('body-parser');
-const app = express();
-const port = 3000;
-const data = require('./events.json');
+// Importation des modules nécessaires
+const express = require('express'); // Express.js pour créer un serveur web
+const path = require('path'); // Module pour gérer les chemins de fichiers
+const fs = require('fs'); // Module pour lire/écrire des fichiers
+const bodyParser = require('body-parser'); // Middleware pour traiter les données POST
+const app = express(); // Crée une instance d'Express
 
-let jsonData;
+const port = 3000; // Numéro de port sur lequel le serveur écoutera
+const data = require('./events.json'); // Importe les données à partir d'un fichier JSON
 
+let jsonData; // Variable pour stocker des données JSON
+
+// Middleware pour traiter les données POST
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.json())
+app.use(express.json());
 
+// Middleware pour servir des fichiers statiques (CSS, JS, images, etc.)
 app.use(express.static(path.join(__dirname, '../')));
 
-
+// Route pour la page d'accueil
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../index.html'));
 });
 
-
+// Route pour obtenir des événements depuis un fichier JSON
 app.get('/api/events', (req, res) => {
     const jsonFilePath = path.join(__dirname, 'backend', 'events.json');
     fs.readFile(jsonFilePath, 'utf8', (err, data) => {
@@ -30,47 +34,42 @@ app.get('/api/events', (req, res) => {
     });
 });
 
-
+// Route de test avec un paramètre d'URL
 app.get("/test/:id", (req, res) => {
     console.log(req.params);
     res.send("i love ynov test get");
 });
 
+// Route pour mettre à jour l'alignement (en attente d'implémentation)
+app.put("/update/alignement", (req, res) => {
+    // Cette route est actuellement vide, elle nécessite une implémentation.
+});
 
-// a faire 
-app.post("/event/data/:id", (req, res) => {
-    const filePath = "data.json";
-    console.log(req.body)
-    TotalAlignment = data.alignment- 20 
-    jsonData = {
-        "username": req.body.username,
-        "startingItem": "Inventaire : " + req.body.startingItem,
-        "alignment": TotalAlignment,
-        "argent": "Argent : " + 100 + "$",
-        "inventory": []
-    };
-    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
-})
-
+// Route pour traiter les données POST
 app.post("/test", (req, res) => {
     console.log(req.body);
     const filePath = "data.json";
-    // preparation data
 
-    let TotalAlignment = parseInt(req.body.alignmentQuestion1) + parseInt(req.body.alignmentQuestion2) + parseInt(req.body.alignmentQuestion3)
+    // Préparation des données en calculant le total de l'alignement
+    let TotalAlignment = parseInt(req.body.alignmentQuestion1) + parseInt(req.body.alignmentQuestion2) + parseInt(req.body.alignmentQuestion3);
+    gold = 100;
+
     jsonData = {
         "username": req.body.username,
-        "startingItem": "Inventaire : " + req.body.startingItem,
+        "startingItem": req.body.startingItem,
         "alignment": TotalAlignment,
-        "argent": "Argent : " + 100 + "$",
+        "gold": gold,
         "inventory": []
     };
+
+    // Écriture des données dans un fichier JSON
     fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
 
-    res.redirect("question.html")
+    // Redirection vers une page nommée 'question.html'
+    res.redirect("question.html");
 });
 
-// Votre route pour afficher l'événement et gérer la réponse
+// Route pour afficher un événement spécifique et gérer la réponse
 app.get('/events/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const events = data.events;
@@ -80,18 +79,15 @@ app.get('/events/:id', (req, res) => {
         const choixA = event.choix.reponse.find(choix => choix.a === 'a');
         const choixB = event.choix.reponse.find(choix => choix.b === 'b');
 
-
         const htmlResponse = `
-                <form action="http://localhost:3000/event/data/${id}" method="POST">
-                <h2>Description de l'événement</h2>
-                <p>${event.description}</p>
-                <input type="radio" id="choixA" name="choix" value="${choixA.effect}">
-                <label for="choixA">${choixA.choix_a}</label>
-    
-                <input type="radio" id="choixB" name="choix" value="${choixB.effect}">
-                <label for="choixB">${choixB.choix_b}</label>
-                <button id="fetchButton" type="submit">Afficher Événement Suivant</button>
-                </form>`;
+            <h2>Description de l'événement</h2>
+            <p>${event.description}</p>
+            <input type="radio" id="choixA" name="choix" value="a">
+            <label for="choixA">${choixA.choix_a}</label>
+
+            <input type="radio" id="choixB" name="choix" value="b">
+            <label for="choixB">${choixB.choix_b}</label>
+        `;
 
         res.send(htmlResponse);
     } else {
@@ -99,6 +95,5 @@ app.get('/events/:id', (req, res) => {
     }
 });
 
-
+// Démarrage du serveur sur le port spécifié
 app.listen(port, () => console.log('Server listening on port ' + port));
-
