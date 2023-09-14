@@ -1,33 +1,22 @@
 {
-<<<<<<< HEAD
-  "username": "bite",
+  "username": "lasalam",
   "startingItem": "Inventaire : Sac d'Écume d'Or",
-  "alignment": 40,
-  "argent": null,
-=======
-  "username": "nemo",
-  "startingItem": "Inventaire : Sac d'Écume d'Or",
-  "alignment": -35,
+  "alignment": 20,
   "argent": "Argent : 100$",
->>>>>>> 12f9217ebcecd65301a1419edcae4a6e6251962e
   "inventory": [
     "Sac d'Écume d'Or"
   ],
   "questionTime": [
-<<<<<<< HEAD
-    9
-=======
-    10,
-    2,
-    5,
-    4,
-    3,
-    9,
     7,
-    11,
+    6,
+    9,
     8,
+    2,
     1,
-    6
->>>>>>> 12f9217ebcecd65301a1419edcae4a6e6251962e
+    10,
+    11,
+    4,
+    5,
+    3
   ]
 }

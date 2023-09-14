@@ -74,7 +74,6 @@ app.get('/events/:id', (req, res) => {
     if (event) {
         const choixA = event.choix.reponse.find(choix => choix.a === 'a');
         const choixB = event.choix.reponse.find(choix => choix.b === 'b');
-        
 
 
         const htmlResponse = `
@@ -95,18 +94,12 @@ app.get('/events/:id', (req, res) => {
     }
 });
 
-var i = 0;
+
 // Traitement data form jeux
 app.post("/event/data/:id", (req, res) => {
     const filePath = "data.json";
     let dataJson = JSON.parse(fs.readFileSync(filePath,'utf8'))
-    if (dataJson.questionTime == 5){
-        if (i = 0){
-            dataJson.alignment -= req.body.price;
-        }
-    }
-
-    dataJson.argent -= req.body.effect;
+    dataJson.alignment -= req.body.choix;
     console.log(dataJson);
 
     if(dataJson.questionTime.length >= 11){
