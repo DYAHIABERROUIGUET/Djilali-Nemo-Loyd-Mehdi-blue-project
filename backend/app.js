@@ -43,7 +43,8 @@ app.post("/player", (req, res) => {
         "startingItem": "Inventaire : " + req.body.startingItem,
         "alignment": TotalAlignment,
         "argent": "Argent : " + 100 + "$",
-        "inventory": []
+        "inventory": [],
+        "questionTime": []
     };
     fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
 
@@ -92,13 +93,21 @@ app.post("/event/data/:id", (req, res) => {
     let dataJson = JSON.parse(fs.readFileSync(filePath,'utf8'))
     dataJson.alignment -= req.body.choix
     console.log(dataJson);
-    
+    if(dataJson.questionTime.length >= 11){
+        res.redirect('/question.html')
+    }
     fs.writeFileSync(filePath, JSON.stringify(dataJson, null, 2));
     let id_question = Math.floor(Math.random() * (11 - 1+ 1)) + 1;
     console.log(id_question)
     // if (dataJson.alignment <= 0){
     //     res.redirect('/redi')
     // }
+    while (dataJson.questionTime.includes(id_question)) {
+        id_question = Math.floor(Math.random() * 11) + 1;
+    }
+    jsonData.questionTime.push(id_question);
+    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
+    console.log(dataJson.dataJson);
     res.redirect(`/question?q=${id_question}`)
 })
 
