@@ -67,7 +67,6 @@ app.get('/events/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const events = data.events;
     const event = events.find(s => s.id === id);
-
     if (event) {
         const choixA = event.choix.reponse.find(choix => choix.a === 'a');
         const choixB = event.choix.reponse.find(choix => choix.b === 'b');
@@ -84,7 +83,7 @@ app.get('/events/:id', (req, res) => {
                 <label for="choixB">${choixB.choix_b}</label>
                 <button id="fetchButton" type="submit">Valider</button>
                 </form>`;
-
+        
         res.send(htmlResponse);
     } else {
         res.status(404).send('Événement non trouvé');

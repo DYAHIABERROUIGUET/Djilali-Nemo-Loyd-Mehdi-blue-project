@@ -79,23 +79,14 @@
                 "reponse": [
                     {
                         "a": "a",
-<<<<<<< Updated upstream
                         "choix_a": "Bénédiction des dieux 50$ (Cela augmentera votre alignement celeste)",
-=======
-                        "choix_a": "Bénédiction des dieux (+10 gold)",
->>>>>>> Stashed changes
                         "effect": 50,
                         "price" : -50
                     },
                     {
                         "b": "b",
-<<<<<<< Updated upstream
                         "choix_b": "Pomme d'Adan  80$ (Cela augmentera votre alignement celeste)",
                         "effect": 80,
-=======
-                        "choix_b": "Pomme d'Adan (+100 gold)",
-                        "effect": -60,
->>>>>>> Stashed changes
                         "price" : -80
                     }
                 ]
