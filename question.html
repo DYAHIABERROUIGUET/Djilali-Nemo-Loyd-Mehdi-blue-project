@@ -34,7 +34,6 @@
     const eventId = urlParams.get('q');
 
     fetchButton.addEventListener('click', () => {
-        // Effectuer une requête AJAX pour récupérer les données de l'événement suivant
         fetch('/events/' + eventId)
             .then(response => response.text())
             .then(data => {

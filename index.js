@@ -26,33 +26,27 @@
     }
 
     form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Empêcher la soumission du formulaire
+        event.preventDefault(); 
 
         // Récupérer les données du formulaire
         const formData = getFormData();
 
-        // Ajouter les données du formulaire à la variable formDataArray
+        // Ajouter donnée
         formDataArray.push(formData);
 
-        // Effacer le formulaire ou effectuer d'autres actions si nécessaire
+        // reset formulaire
         form.reset();
-
-        // Enregistrer les données du formulaire dans le stockage local (localStorage)
         localStorage.setItem("formData", JSON.stringify(formDataArray));
 
         console.log("Données ajoutées avec succès !");
-        console.log(formData); // Afficher les données dans la console
+        console.log(formData);
     });
-
-    // Vous pouvez ajouter un bouton pour afficher ou utiliser les données plus tard
     const displayButton = document.getElementById("displayButton");
 
     displayButton.addEventListener("click", function() {
-        // Charger les données du formulaire depuis le stockage local (localStorage)
         const storedData = localStorage.getItem("formData");
         if (storedData) {
             const parsedData = JSON.parse(storedData);
-            // Utilisez parsedData comme vous le souhaitez, par exemple, affichez-le dans la console
             console.log(parsedData);
             console.log(value);
         } else {
@@ -60,5 +54,3 @@
         }
     });
 });
-
-consolz.log(name);
