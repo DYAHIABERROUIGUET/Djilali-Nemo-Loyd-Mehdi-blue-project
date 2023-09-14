@@ -3,7 +3,27 @@
     font-family: "Source Code Pro";
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 30px;
     color: var(--text-color);
-    margin-top: 20px; /* Ajustez la marge en fonction de votre mise en page */
+    margin-top: 20px; 
+    z-index: 1;
+    
   }
+  .phrase_score_container {
+    width: 400px;
+    height: 100px;
+    margin-right: 50px;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba(245,245,220, 0.5); /* Utilisation de rgba avec une opacité */
+    border-radius: 4px;
+}
+
+/* Ajoutez des règles spécifiques pour les enfants de phrase_score_container */
+.phrase_score_container .child-element {
+    opacity: 1; /* Enlevez l'opacité pour les enfants spécifiques si nécessaire */
+}
+
+.texte {
+    text-align: center;
+    font-size: 30px;
+}
