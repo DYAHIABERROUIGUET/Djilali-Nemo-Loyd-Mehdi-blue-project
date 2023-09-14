@@ -1,7 +1,7 @@
 {
   "username": "bite",
   "startingItem": "Inventaire : Sac d'Écume d'Or",
-  "alignment": -50,
+  "alignment": 60,
   "argent": "Argent : 100$",
   "inventory": []
 }
