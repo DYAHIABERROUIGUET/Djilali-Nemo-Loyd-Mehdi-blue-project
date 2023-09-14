@@ -1,19 +1,12 @@
 {
   "username": "bite",
-  "startingItem": "Inventaire : Miroir d'Équilibre",
-  "alignment": 35,
-  "argent": "Argent : 100$",
+  "startingItem": "Inventaire : Sac d'Écume d'Or",
+  "alignment": 40,
+  "argent": null,
   "inventory": [
-    "Miroir d'Équilibre"
+    "Sac d'Écume d'Or"
   ],
   "questionTime": [
-    1,
-    3,
-    11,
-    4,
-    7,
-    2,
-    9,
-    6
+    9
   ]
 }
