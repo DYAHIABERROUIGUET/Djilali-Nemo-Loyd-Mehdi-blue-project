@@ -10,7 +10,7 @@
 
 <body>
     <div>
-        <form action="http://localhost:3000/test" id="playerForm" method="POST">
+        <form action="http://localhost:3000/player" id="playerForm" method="POST">
             <div id="createPlayerForm" class="container hidden">
                 <h2>Créer un joueur</h2>
                 <label for="username">Nom du joueur:</label>
@@ -33,6 +33,8 @@
 
                 <label for="alignmentQuestion2"> Est-ce que votre personnage est prêt à sacrifier des innocents ou à
                     agir de manière malveillante pour atteindre ses propres objectifs ?</label>
+                    <input type="radio" id="alignmentQuestion2" name="alignmentQuestion2" value="10">Oui
+                    <input type="radio" name="alignmentQuestion2" value="-20">Non
                 <br>
                 <br>
 

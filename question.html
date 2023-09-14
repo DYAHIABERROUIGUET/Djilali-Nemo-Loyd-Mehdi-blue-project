@@ -20,14 +20,8 @@
     <div class="body">
         <div id="createPlayerForm" class="container hidden">
             <h2>Événement</h2>
-            <button id="fetchButton" type="submitChoice">Afficher Événement Suivant</button>    
-            <form action="">
-            <div id="createPlayerForm" class="container hidden">
-                <input type="radio" id="question" name="alignmentQuestion2" value="-20">Oui
-                <input type="radio" name="question" value="-20">Non
+            <button id="fetchButton">Afficher Événement Suivant</button>    
                 <div id="eventData"></div>
-            </div>
-        </form>
         </div>
     </div>  
 
@@ -36,15 +30,15 @@
     const filePath = "data.json";
     
     const fetchButton = document.getElementById('fetchButton');
-    let currentEventId = 1; // ID de l'événement actuel
+    const urlParams = new URLSearchParams(window.location.search);
+    const eventId = urlParams.get('q');
 
     fetchButton.addEventListener('click', () => {
         // Effectuer une requête AJAX pour récupérer les données de l'événement suivant
-        fetch('/events/' + currentEventId)
+        fetch('/events/' + eventId)
             .then(response => response.text())
             .then(data => {
                 document.getElementById('eventData').innerHTML = data;
-                currentEventId++; // Passer à l'événement suivant
             })
             .catch(error => {
                 console.error('Erreur lors de la récupération des données :', error);

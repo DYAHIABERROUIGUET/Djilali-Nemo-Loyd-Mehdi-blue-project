@@ -8,12 +8,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": -10
+                        "effect": -30
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": 200
+                        "effect": 30
                     }
                 ]
             }
@@ -26,12 +26,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": ""
+                        "effect": 40
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": ""
+                        "effect": -40
                     }
                 ]
             }
@@ -44,12 +44,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": ""
+                        "effect": 60
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": ""
+                        "effect": -60
                     }
                 ]
             }
@@ -62,12 +62,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": ""
+                        "effect": 90
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": ""
+                        "effect": -90
                     }
                 ]
             }
@@ -100,12 +100,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": ""
+                        "effect": 10
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": ""
+                        "effect": -10
                     }
                 ]
             }
@@ -118,12 +118,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": ""
+                        "effect": 30
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": ""
+                        "effect": -30
                     }
                 ]
             }
@@ -136,12 +136,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": ""
+                        "effect": -50
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": ""
+                        "effect": 60
                     }
                 ]
             }
@@ -154,12 +154,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": ""
+                        "effect": -80
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": ""
+                        "effect": 40
                     }
                 ]
             }
@@ -172,12 +172,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": ""
+                        "effect": 90
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": ""
+                        "effect": -40
                     }
                 ]
             }
@@ -190,12 +190,12 @@
                     {
                         "a": "a",
                         "choix_a": "OUI",
-                        "effect": ""
+                        "effect": -90
                     },
                     {
                         "b": "b",
                         "choix_b": "NON",
-                        "effect": ""
+                        "effect": 20
                     }
                 ]
             }
