@@ -2,10 +2,15 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const bodyParser = require('body-parser');
+const cors = require('cors'); // Importez le middleware cors
+
 const app = express();
 const port = 3000;
 const data = require('./events.json');
 var http = require("http");
+
+// Activez CORS pour toutes les routes
+app.use(cors());
 
 let jsonData;
 
